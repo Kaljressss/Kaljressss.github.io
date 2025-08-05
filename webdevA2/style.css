@@ -1,0 +1,303 @@
+body
+{
+    overflow-x:hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+#menubtn{
+    position: fixed;
+    border-width: 1px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    margin: -10px;
+    left: 20px;
+    top:20px;
+    border-color: white;
+    border-radius: 10px;
+    transition: .5s;
+    transform-origin: center;
+    
+
+}
+
+@keyframes dropdownanim{
+    0%{transform: rotate(90deg)}
+    25%{transform: rotate(180deg)}
+    50%{transform: translate(10px);}
+    100%{transform: translate(30px);}
+}
+
+
+#dropdown{
+    position: fixed;
+    margin-left:-8px;
+    margin-bottom: 50px;
+    top:100px;
+    
+
+}
+
+#dropdown button{
+    transform-origin: 0px 50%;
+    display: block;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(0, 109, 0);
+    transform: rotate(-180deg);
+    text-align: right;
+    width:90px;
+    scale:1.0;
+    
+
+}
+
+#dropdown button.open{
+    animation-direction: normal;
+    transition: .3s;
+}
+
+#dropdown button#sect1.open{
+    animation: dropdownanim 1s;
+    animation-fill-mode: forwards;
+}
+#dropdown button#sect2.open{
+    animation: dropdownanim 1.4s;
+    animation-fill-mode: forwards;
+}
+#dropdown button#sect3.open{
+    animation: dropdownanim 1.8s;
+    animation-fill-mode: forwards;
+}
+
+#dropdown button.hov{
+
+    scale: 1.1;
+    background-color: rgb(95, 220, 0);
+}
+
+
+
+#titleblock{
+    
+    background-image:url("images/alien.jpg");
+    display: flex;
+    justify-content: center;
+    width:105vw;
+    height:56vw;
+    
+    background-size: 100%;
+    
+
+
+    color: white;
+}
+#titleblock.menuhov{
+    background-size: auto 100%;
+}
+
+#title{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size:80px;
+
+}
+
+
+
+#abt{
+
+
+    height: 600px;
+    color: rgb(255, 255, 255);
+    margin-left: 40px;
+
+
+    
+}
+#btncenter{
+    width: 100%;
+
+}
+#upbtn{
+    display:block;
+    bottom:-50px;
+    transition: .3s;
+    
+}
+
+#upbtn.scrolleddown{
+    position:fixed;
+    bottom: 40px;
+    left:40px;
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    background-position: center;
+    border-radius: 12px;
+
+
+}
+#upbtn.hovered{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    bottom: 45px;
+    left:45px;
+}
+
+hr{
+    margin: -20px;
+    width: 100%;
+    border-color: rgb(76, 117, 0);
+    margin-bottom: 30px;
+}
+#abt{
+    width: 100%;
+}
+#abt h1{
+    margin-top: 40px;
+    font-size:50px;
+    text-align: center;
+}
+#abt aside{
+    font-size: 30px;
+    text-align: center;
+
+}
+.hamburg{
+    width:50px;
+    height:10px;
+    background-color: white;
+    border-radius: 3px;
+    margin: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .5s;
+}
+.hamburg.hov{
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
+aside{
+    max-width: fit-content;
+    width: 870px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content{
+    opacity: 0%;
+    transition: .5s;
+    overflow-y: hidden;
+    position:static;
+    align-items: center;
+    
+}
+.selecttxt{
+    opacity:100%;
+}
+.imgblk{
+    width: 100vw;
+}
+
+
+#introimg0{
+    position: absolute;
+    min-width:300px;
+    width: 25%;
+    height: auto;
+    left:20%;
+
+    
+
+
+}
+#fearimg0{
+    position: absolute;
+    width:50vw;
+    left:0px;
+}
+#fearimg1{
+    position: absolute;
+    width:40vw;
+    right: 0;
+}
+#game button{
+    display: block;
+}
+#game img{
+    width: 70%;
+    height:32%;
+    position: absolute;
+    overflow-x:hidden;
+    object-fit: contain;
+}
+
+#qr{
+    display: block;
+}
+
+@media (max-width:800px) {
+    aside{
+        font-size: 10px;
+    }
+    #qr{
+        display: none;
+    }
+    .content{
+        display: none;
+        transition: .5s;
+        overflow-y: hidden;
+        align-items: center;
+        
+    }
+    .selecttxt{
+        display: block;
+    }
+    .content aside{
+        display: block;
+    }
+    #introimg0{
+        position:static;
+        min-width:300px;
+        width: 25%;
+        height: auto;
+        left:0;
+
+        
+
+
+    }
+    #fearimg0{
+        position: static;
+        width:50vw;
+        left:0px;
+    }
+    #fearimg1{
+        position: static;
+        width:40vw;
+        right: 0;
+    }
+    #game{
+        display: block;
+    }
+    #game button{
+        display: block;
+    }
+    #game img{
+
+        display: block;
+        width: 100%;
+        height: 45%;
+        position: static;
+        overflow-x:hidden;
+        object-fit: contain;
+    }
+}
